@@ -1,11 +1,14 @@
 #include <stdio.h>
-int main()
+void main()
 {
-    int a,b,c;
-    a=10;b=60;c=30;
-    if(a>b) a=b;
-    b=c;
-    c=a;
-    printf("a=%d,b=%d,c=%d\n",a,b,c);
-    return 0;
+    int logic;
+    int a=1;
+    int b=2;
+    int c=3;
+    logic=a+b>c&&b<=c;
+    printf("logic=%d\n",logic);
+    logic=a>=b+c||b==c;
+    printf("logic=%d\n",logic);
+    logic=!(a<c)+b!=1&&(a+c)/2;
+    printf("logic=%d\n",logic);
 }
