@@ -1,9 +1,21 @@
-#include <stdio.h>
-int main()
-{
-    int *p,a=15,b=5;
-    p=&a;
-    a=*p+b;
-    printf("a=%d,%d\n",a,*p);
-    return 0;
-}
+int f(char *s, char *t) 
+{ 
+      char *p1, *p2; 
+     for (p1 = s; *p1; p1++) 
+ { 
+     for (p2 = t; p2; p2++) 
+ { 
+     if (*p1 == *p2) 
+ { 
+         break; 
+ } 
+ } 
+      if (*p2 == '\0') 
+         break; 
+ } 
+ return p1 - s; 
+} 
+void main() 
+{ 
+ printf("%d",f("abcd", "babc")); 
+} 
